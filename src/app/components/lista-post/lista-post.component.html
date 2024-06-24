@@ -1,0 +1,8 @@
+<h1>Home</h1>
+<app-filtro-box></app-filtro-box>
+<div *ngIf="!s.onSearch">
+  <app-dettaglio-post *ngFor="let p of posts" [post]="p"></app-dettaglio-post>
+</div>
+<div *ngIf="s.onSearch">
+  <app-dettaglio-post *ngFor="let p of s.post" [post]="p"></app-dettaglio-post>
+</div>

@@ -1,0 +1,19 @@
+<div *ngIf="s.postPreferiti.length > 0">
+  <h3>Preferiti:{{ s.postPreferiti.length }}</h3>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let p of s.postPreferiti">
+      {{ p.id }} - {{ p.title }}
+      <button type="btn">
+        <i class="bi bi-x-circle" (click)="s.removeFav(p)"></i>
+      </button>
+    </li>
+  </ul>
+  <button
+    type="button"
+    class="btn btn-danger"
+    (click)="s.postPreferiti.length = 0"
+  >
+    Svuota preferiti
+  </button>
+</div>
+<h5 *ngIf="s.postPreferiti.length == 0">Nessun post fra i preferiti</h5>
