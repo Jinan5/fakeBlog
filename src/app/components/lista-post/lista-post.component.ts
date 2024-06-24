@@ -8,7 +8,6 @@ import { PostsItem } from '../../../model/postModel';
   styleUrl: './lista-post.component.css',
 })
 export class ListaPostComponent implements OnInit {
-  @Input()
   posts: PostsItem[] = [];
 
   constructor(public s: ServizioService) {}
